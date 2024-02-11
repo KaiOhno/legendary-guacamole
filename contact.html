@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kai's Portfolio</title>
+    <link rel="stylesheet" href="stylesContact.css" />
+  </head>
+  <body>
+    <section id="detailed-contact">
+      <h2 class="headLiner">
+        CRAFTING YOUR CONCEPTS INTO EXCEPTIONAL CREATIONS TOGETHER.
+      </h2>
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="detailed-contact-form">
+        <input
+          type="hidden"
+          name="access_key"
+          value="2836349d-9530-417d-80fe-b46c628c61d6" />
+        <div class="form-row">
+          <label class="yourName">Your Name</label>
+          <input
+            class="form-field"
+            type="text"
+            name="name"
+            placeholder="John Doe*"
+            required />
+          <label class="emailLabel">Email Address</label>
+          <input
+            class="form-field"
+            type="email"
+            name="email"
+            placeholder="JohnDoe@example.com*"
+            required />
+        </div>
+        <label class="companyName">Company Name</label>
+        <div class="form-row">
+          <input
+            class="form-field"
+            type="text"
+            name="company"
+            placeholder="Company Name" />
+        </div>
+
+        <label class="lookingFor"
+          >I am looking for (select multiple if needed):</label
+        >
+        <div class="service-options">
+          <input
+            type="checkbox"
+            id="web-development"
+            name="services"
+            value="web_development" />
+          <label for="web-development" class="button-like"
+            >Web Development</label
+          >
+
+          <input
+            type="checkbox"
+            id="web-design"
+            name="services"
+            value="web_design" />
+          <label for="web-design" class="button-like"
+            >Creative Web Design</label
+          >
+
+          <input
+            type="checkbox"
+            id="branding-services"
+            name="services"
+            value="branding_services" />
+          <label for="branding-services" class="button-like"
+            >Branding & Identity Strategy</label
+          >
+
+          <input
+            type="checkbox"
+            id="graphic-design"
+            name="services"
+            value="graphic_design" />
+          <label for="graphic-design" class="button-like"
+            >Graphic Design & Visual Artistry</label
+          >
+
+          <input
+            type="checkbox"
+            id="video-production"
+            name="services"
+            value="video_production" />
+          <label for="video-production" class="button-like"
+            >Video Production</label
+          >
+
+          <input
+            type="checkbox"
+            id="photography"
+            name="services"
+            value="photography" />
+          <label for="photography" class="button-like"
+            >Photography Services</label
+          >
+
+          <input
+            type="checkbox"
+            id="logo-branding"
+            name="services"
+            value="logo_branding" />
+          <label for="logo-branding" class="button-like"
+            >Logo Design & Brand Development</label
+          >
+        </div>
+
+        <label class="budgetheader">My budget is:</label>
+        <div class="budget-options">
+          <input type="radio" id="budget-1" name="budget" value="800-2000" />
+          <label for="budget-1" class="button-like">CAD $800 - $2000</label>
+
+          <input type="radio" id="budget-2" name="budget" value="2001-5000" />
+          <label for="budget-2" class="button-like">CAD $2001 - $5000</label>
+
+          <input type="radio" id="budget-3" name="budget" value="5001-up" />
+          <label for="budget-3" class="button-like">CAD $5001 and up</label>
+        </div>
+
+        <textarea
+          class="textAreastyle"
+          name="message"
+          placeholder="More details about the project (brief summary, timeline, etc.)*"
+          required></textarea>
+        <br />
+        <button class="submit">Submit Project Inquiry</button>
+      </form>
+    </section>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <div class="contact-container">
+      <div class="get-in-touch">
+        <a href="contact.html" class="get-in-touch-link">
+          <p>Got a project? Want to collaborate?</p>
+          <h1>GET IN TOUCH</h1>
+        </a>
+      </div>
+    </div>
+    <footer class="navigation-bar">
+      <div class="navigation">
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#what-i-do">Services</a></li>
+          <li><a href="index.html#skills">Experience</a></li>
+          <li>
+            <a href="index.html#website-creation-step">Website Creation</a>
+          </li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="socials">
+        <h2>Socials</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/KaiOhno/">Linkedin</a></li>
+          <li><a href="https://github.com/KaiOhno">Github</a></li>
+          <li><a href="https://bento.me/kaiohno">Bento</a></li>
+          <li><a href="https://www.figma.com/@kaiohno">Figma</a></li>
+        </ul>
+      </div>
+      <div class="local-time">
+        <h2>LOCAL TIME</h2>
+        <p id="torontoTime"></p>
+      </div>
+
+      <p class="copyright">
+        <span>© 2024</span>
+        <span>KAI OHNO</span>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

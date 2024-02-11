@@ -1,0 +1,795 @@
+.html {
+  scroll-behavior: smooth;
+  background-color: #ded8d8;
+}
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text-content {
+  flex-basis: 50%; /* Adjust this value as needed for your layout */
+}
+
+.about-subtitle {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 100; /* Ensure you're specifying the correct font-weight for thin */
+  font-size: 2vw;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.title-container {
+  display: inline-block; /* This will shrink the container to the width of its content */
+  position: relative; /* For positioning the underline relative to the title */
+  text-align: center; /* If you want to center the title */
+}
+
+.about-title {
+  font-family: 'Switzer-black', sans-serif;
+  font-size: 6vw;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: inline; /* Inline or block, depending on your needs */
+}
+
+.title-underline {
+  width: 100%; /* Make the underline as wide as the title-container */
+  height: 4px;
+  background-color: #000;
+  border: none;
+  display: block; /* Makes hr behave as a block-level element */
+  margin-top: 0.5vh;
+  margin-bottom: 1.5vh;
+}
+
+.about-text {
+  font-family: 'Switzer-light', sans-serif;
+  font-size: 1.4vw;
+  color: #000;
+  font-weight: 500;
+  text-align: justify;
+  margin: 0;
+}
+
+.info-boxes {
+  padding: 5vh 0vw 0vh 0vw;
+  display: flex;
+  flex-direction: row; /* Stack images vertically */
+  gap: 20px; /* Adjust as needed */
+}
+
+.info-box-image {
+  filter: invert(100%);
+  width: 20vw; /* Adjust as needed */
+  height: auto;
+}
+
+.profile-social-section {
+  flex-basis: 50%; /* Adjust this value as needed for your layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture-with-names {
+  width: 100%; /* Adjust as needed */
+  max-width: 30vw; /* Limit the size of the profile picture */
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px; /* Space between icons */
+  padding-top: 20px; /* Space above the icons */
+  padding-right: 20px;
+}
+
+.icon-linkedin,
+.icon-github {
+  width: 3rem; /* Size of the social icons */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content,
+  .profile-social-section {
+    flex: none; /* Reset flex sizing */
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .about-subtitle {
+    font-size: 5vw; /* Larger subtitle on smaller screens */
+  }
+
+  .about-title {
+    font-size: 8vw; /* Larger title on smaller screens */
+  }
+
+  .about-text {
+    font-size: 3vw; /* Increase text size for readability */
+    margin: 0vh 0vw 0vh -4vw;
+  }
+  .info-boxes {
+    margin: 0vh 0vw 0vh -6vw;
+  }
+  .info-box-image {
+    width: 30vw; /* Increase image size */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center social icons */
+    padding-top: 5vw; /* Adjust padding */
+  }
+  .profile-picture-with-names {
+    width: 100vw;
+    max-width: 60vw;
+    padding-top: 3vh;
+  }
+  .icon-linkedin,
+  .icon-github {
+    width: 15vw; /* Larger icons */
+  }
+}
+#what-i-do {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Switzer', sans-serif;
+  padding: 5vh 5vw; /* Use viewport units for responsive padding */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items to the start vertically */
+  border-radius: 25px;
+}
+
+.what-i-do-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.left-column h2 {
+  font-family: 'Switzer-bold', sans-serif;
+  font-size: 6vw; /* Adjust size for responsiveness */
+  margin-bottom: 1vh; /* Add a little space below the heading */
+  display: block; /* This will shrink the container to the width of its content */
+  position: relative; /* For positioning the underline relative to the title */
+  width: auto;
+}
+
+.left-column h2::after {
+  content: '';
+  display: block;
+  width: 100%; /* Make the underline as wide as the title-container */
+  height: 4px;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -1vh; /* Adjust the position as needed */
+}
+
+.left-column .what-i-do-text {
+  font-family: 'Switzer-light', sans-serif;
+  font-size: 1.8rem; /* Adjust size for readability */
+  line-height: 1.5;
+  margin-top: 2vh; /* Space after the title */
+  max-width: 80vw; /* Max width for text wrapping */
+  text-align: start;
+}
+
+.right-column .services-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 5vw; /* Add some space between the columns */
+  padding: 10px 0px 10vh 30%;
+}
+
+.accordion {
+  background-color: transparent;
+  font-family: 'switzer-bold';
+  color: #fff;
+  cursor: pointer;
+  padding: 1.5vw;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #fff; /* Add a border to your accordion */
+  outline: none;
+  transition: background-color 0.6s ease;
+  font-size: 2vw; /* Responsiveness */
+  margin-bottom: 1vh;
+}
+
+.accordion:hover,
+.accordion.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.panel {
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+}
+
+.panel p {
+  font-size: 1.5vw;
+  padding: 2vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .what-i-do-container {
+    flex-direction: column;
+    align-items: center; /* Center-align the entire container's content */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%; /* Make both columns take full width */
+    text-align: left; /* Center-align the text for both columns */
+  }
+
+  .left-column .what-i-do-text,
+  .title-container2 {
+    font-size: 4vw; /* Adjust font size for better readability on smaller screens */
+    text-align: left; /* Ensure text within these elements is centered */
+    max-width: 100%; /* Adjust max-width for better spacing */
+    margin: 0 auto; /* Center-align the blocks within their container */
+  }
+
+  .right-column .services-list {
+    flex: none;
+
+    font-size: 4vw; /* Adjust font size for better readability on smaller screens */
+    text-align: center; /* Ensure text within these elements is centered */
+    max-width: 100%; /* Adjust max-width for better spacing */
+    margin: 0 auto; /* Center-align the blocks within their container */
+  }
+
+  .left-column h2 {
+    font-size: 9vw; /* Increase font size of the heading for mobile devices */
+    margin: 0 0 2vh; /* Add some bottom margin for spacing */
+  }
+  .title-container2 p {
+    font-size: 7vw;
+  }
+
+  .right-column .services-list {
+    margin-left: 0; /* Reset any left margin */
+    padding: 0; /* Reset padding to ensure alignment */
+    display: flex; /* Use flex to manage the list items */
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Align list items to the center */
+  }
+
+  .accordion {
+    font-size: 5vw; /* Adjust accordion font size for mobile */
+    width: 100%; /* Adjust width to fit content */
+    margin: 5px 0; /* Add vertical margin for spacing between accordions */
+  }
+
+  .panel p {
+    font-size: 4vw; /* Adjust panel paragraph font size for mobile */
+    padding: 4vw; /* Adjust padding for better readability */
+  }
+}
+
+/* Typing animation styles */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+.title-container2 {
+  display: block; /* Ensures that the title stays in block format */
+  position: relative; /* For positioning the pseudo-elements */
+}
+.title {
+  font-family: 'switzer-italic';
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid #fff;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-cursor 0.75s step-end infinite;
+  font-size: 2vw;
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+#skills {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-header {
+  margin-bottom: 30px;
+}
+
+.skills-header h2,
+.explore-my {
+  font-family: 'Switzer-bold', sans-serif;
+  color: #000;
+  margin: 10px 0; /* Ensure spacing between title and subtitle */
+}
+
+.skills-header h2 {
+  font-size: 4rem; /* Adjust size as needed */
+}
+
+.explore-my {
+  font-family: 'Switzer-thin';
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: row; /* Align images in a row for larger screens */
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping as needed */
+  gap: 20px; /* Space between images */
+  width: 100%;
+}
+
+.skill-image {
+  height: auto;
+  width: 32vw; /* Adjust based on desired column width, consider using max-width for control */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .skills-content {
+    flex-direction: column; /* Stack images vertically for mobile */
+  }
+
+  .skill-image {
+    width: 80%; /* Adjust image width for mobile */
+    margin: 0vh 0vw 0px 10vw;
+  }
+}
+
+#website-creation-step {
+  padding: 10px 50px 50px 50px;
+}
+
+.step-header h2 {
+  position: relative;
+  padding: 0%;
+  margin: 0vh 0vw 0vh 10vw;
+  font-family: 'Switzer-bold', sans-serif;
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+.step-header h2::after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 4px;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.step-header p {
+  margin: 0vh 0vw 0vh 10vw;
+  font-family: 'Switzer-thin', sans-serif;
+  font-size: 2em;
+  position: relative;
+}
+
+.step-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  touch-action: pan-y; /* Prevent vertical scrolling when swiping */
+}
+
+.step-details {
+  width: 100%; /* Full width for each step */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: absolute; /* Stack steps on top of each other */
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden; /* Hide steps initially */
+}
+
+.step-details.active {
+  opacity: 1;
+  visibility: visible; /* Only the active step is visible */
+  position: relative; /* Bring the active step into the document flow */
+}
+/* Navigation dots container */
+.nav-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Individual dot */
+.nav-dot {
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Active dot */
+.nav-dot.active {
+  height: 35px;
+  width: 35px;
+  background-color: #000;
+}
+
+/* Arrow buttons */
+.nav-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-arrow.left {
+  left: 20px;
+  display: none; /* Hide left arrow initially */
+}
+
+.nav-arrow.right {
+  right: 20px;
+}
+
+/* Hide right arrow on the last step - This requires adding a specific class via JS when on the last item */
+.nav-arrow.right.hide {
+  display: none;
+}
+
+.step-title {
+  font-family: 'Switzer-bold', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  display: block;
+  border-radius: 5px;
+  padding: 10vh 0px 0px 0px;
+  margin: 0;
+}
+
+.step-info {
+  max-width: 70%;
+  font-family: 'Switzer-light', sans-serif;
+  font-size: 2em;
+  color: #000;
+  margin: 40px auto; /* Adds top margin and centers horizontally in its container */
+  text-align: center; /* Centers the text lines within the .step-info element */
+}
+
+@media (max-width: 768px) {
+  #website-creation-step {
+    padding: 5px;
+  }
+
+  .step-header h2,
+  .step-header p {
+    text-align: center; /* Center align the text for smaller screens */
+    padding: 0; /* Adjust padding */
+  }
+
+  .step-header h2 {
+    font-size: 2em; /* Adjust for smaller screens */
+    margin: 0; /* Remove specific margins */
+  }
+
+  .step-header p {
+    font-size: 1.5em; /* Adjust for readability */
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column; /* Stack the steps vertically */
+    align-items: center; /* Center the steps horizontally */
+    overflow: hidden; /* Hide non-active steps */
+    width: 100%; /* Full width of its parent */
+    font-size: 0.9rem;
+  }
+  .step-title {
+    font-size: 2rem;
+  }
+
+  .step-details {
+    min-width: 60%;
+    max-width: 90%;
+    width: 100%; /* Slightly less than full width for some padding */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially not visible */
+    position: absolute; /* Positioned absolutely to overlay in the same space */
+    transition: opacity 0.5s ease, visibility 0.5s;
+    font-size: 0.5rem;
+  }
+
+  .step-details.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative; /* Make the active step part of the document flow */
+    transition-delay: 0s;
+  }
+
+  .nav-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space between steps and dots */
+  }
+
+  .nav-dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .nav-dot.active {
+    background-color: #000;
+  }
+}
+
+.contact-container {
+  padding: 50px;
+  text-align: center;
+}
+
+.get-in-touch-link {
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.get-in-touch h1 {
+  font-family: 'switzer-black', sans-serif;
+  font-size: 10vw;
+  margin: 0;
+  position: relative;
+}
+
+.get-in-touch h1::after {
+  background: black;
+  content: '';
+  display: block;
+  height: 6px;
+  left: 50%;
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(-50%);
+  transition: width 0.5s ease;
+  width: 0;
+}
+
+.get-in-touch a:hover h1::after {
+  width: 100%;
+}
+
+.get-in-touch p {
+  font-family: 'switzer-thin';
+  font-size: 4vw;
+  margin: 5vh 0vw -4vh 0vw;
+  padding: 0%;
+}
+
+.copyright span {
+  display: block;
+  font-family: 'Switzer-bold';
+  margin: 0vh 0vw -3vh 1vw;
+  padding: 0%;
+  text-align: left;
+}
+
+.copyright span:first-child {
+  font-size: 3vw;
+}
+
+.copyright span:last-child {
+  font-size: 3vw;
+}
+
+.navigation,
+.socials {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.navigation h2,
+.socials h2 {
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.navigation ul,
+.socials ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation a,
+.socials a {
+  color: inherit;
+  font-family: 'switzer-regular';
+  font-size: 1.8rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.navigation a:hover,
+.socials a:hover {
+  color: #3498db;
+}
+
+.navigation a::after,
+.socials a::after {
+  background-color: #3498db;
+  content: '';
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  bottom: -5px;
+  transition: left 0.3s ease, width 0.3s ease;
+  width: 0;
+}
+
+.navigation a:hover::after,
+.socials a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.local-time {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 4vh 0vw 0vh 33vw;
+  position: absolute;
+}
+
+.local-time h2,
+.local-time p {
+  font-family: 'switzer-bold';
+  font-size: 3vw;
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.local-time h2 {
+  padding-right: 20px;
+}
+
+#scrollToTopBtn {
+  animation: fadeIn 0.3s;
+  border: none;
+  border-radius: 50%;
+  color: #000000; /* Button text color */
+  cursor: pointer;
+  padding: 8px 12px; /* Adjust padding to make the button smaller */
+  font-size: 16px; /* Adjust font size as needed */
+  background-color: #ffffff; /* Background color of the button */
+
+  margin: -30vh 0vw 0vh 0vw;
+  position: absolute; /* Use fixed to keep it in view while scrolling */
+  right: 20px; /* Distance from right */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #2980b9; /* Change background color on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .get-in-touch h1 {
+    font-size: 8vw; /* Adjusted for better readability on small screens */
+  }
+
+  .get-in-touch p {
+    font-size: 5vw; /* Increased size for readability */
+    margin: 2vh 0 2vh; /* Adjusted margins */
+  }
+
+  .navigation a,
+  .socials a {
+    font-size: 4vw; /* Increase font size for better readability */
+  }
+
+  .local-time h2,
+  .local-time p {
+    font-size: 5vw; /* Adjusted for consistency and readability */
+  }
+  .copyright span {
+    display: block;
+    font-family: 'Switzer-bold';
+    margin: 0vh 0vw 0vh 0vw;
+    padding: 0%;
+    text-align: left;
+  }
+
+  .copyright span:first-child {
+    font-size: 5vw;
+  }
+
+  .copyright span:last-child {
+    font-size: 5vw;
+  }
+
+  #scrollToTopBtn {
+    visibility: hidden;
+    margin: -20vh 5vw 0 0; /* Adjusted position */
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+  }
+
+  .navigation ul,
+  .socials ul {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Adjusted gap for vertical layout */
+  }
+}
